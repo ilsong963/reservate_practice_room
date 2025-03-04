@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -6,12 +7,18 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final db = FirebaseFirestore.instance;
+
     return Scaffold(
-        body: ElevatedButton(
-      onPressed: () {
-        GoRouter.of(context).go('/home');
-      },
-      child: Text('Login'),
+        body: Column(
+      children: [
+        ElevatedButton(
+          onPressed: () {
+            GoRouter.of(context).push('/home');
+          },
+          child: Text('Login'),
+        ),
+      ],
     ));
   }
 }

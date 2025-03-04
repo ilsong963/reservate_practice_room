@@ -6,23 +6,19 @@ part of 'room_reservation_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$RoomReservationModelImpl _$$RoomReservationModelImplFromJson(
-        Map<String, dynamic> json) =>
-    _$RoomReservationModelImpl(
-      roomNumber: json['roomNumber'] as String,
+_$RoomReservationModelImpl _$$RoomReservationModelImplFromJson(Map<String, dynamic> json) => _$RoomReservationModelImpl(
+      roomNumber: (json['roomNumber'] as num).toInt(),
       reservationName: json['reservationName'] as String,
-      startTime: DateTime.parse(json['startTime'] as String),
-      endTime: DateTime.parse(json['endTime'] as String),
+      startTime: (json['startTime'] as num).toInt(),
+      endTime: (json['endTime'] as num).toInt(),
       status: $enumDecode(_$StatusEnumMap, json['status']),
     );
 
-Map<String, dynamic> _$$RoomReservationModelImplToJson(
-        _$RoomReservationModelImpl instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$$RoomReservationModelImplToJson(_$RoomReservationModelImpl instance) => <String, dynamic>{
       'roomNumber': instance.roomNumber,
       'reservationName': instance.reservationName,
-      'startTime': instance.startTime.toIso8601String(),
-      'endTime': instance.endTime.toIso8601String(),
+      'startTime': instance.startTime,
+      'endTime': instance.endTime,
       'status': _$StatusEnumMap[instance.status]!,
     };
 

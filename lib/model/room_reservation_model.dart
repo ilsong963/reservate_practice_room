@@ -5,10 +5,10 @@ part 'room_reservation_model.freezed.dart';
 @freezed
 abstract class RoomReservationModel with _$RoomReservationModel {
   const factory RoomReservationModel({
-    required String roomNumber,
+    required int roomNumber,
     required String reservationName,
-    required DateTime startTime,
-    required DateTime endTime,
+    required int startTime,
+    required int endTime,
     required Status status,
   }) = _RoomReservationModel;
 

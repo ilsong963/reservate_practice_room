@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "967974486497",
+    "project_id": "reservate-practice-room",
+    "storage_bucket": "reservate-practice-room.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:967974486497:android:eb3926d194d6570ca8d2a0",
+        "android_client_info": {
+          "package_name": "com.example.reservate_practice_room"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqnk80psq4hij_Utx3AobUWRzhhz2i5BA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

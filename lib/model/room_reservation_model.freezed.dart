@@ -20,10 +20,10 @@ RoomReservationModel _$RoomReservationModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$RoomReservationModel {
-  String get roomNumber => throw _privateConstructorUsedError;
+  int get roomNumber => throw _privateConstructorUsedError;
   String get reservationName => throw _privateConstructorUsedError;
-  DateTime get startTime => throw _privateConstructorUsedError;
-  DateTime get endTime => throw _privateConstructorUsedError;
+  int get startTime => throw _privateConstructorUsedError;
+  int get endTime => throw _privateConstructorUsedError;
   Status get status => throw _privateConstructorUsedError;
 
   /// Serializes this RoomReservationModel to a JSON map.
@@ -43,10 +43,10 @@ abstract class $RoomReservationModelCopyWith<$Res> {
       _$RoomReservationModelCopyWithImpl<$Res, RoomReservationModel>;
   @useResult
   $Res call(
-      {String roomNumber,
+      {int roomNumber,
       String reservationName,
-      DateTime startTime,
-      DateTime endTime,
+      int startTime,
+      int endTime,
       Status status});
 }
 
@@ -76,7 +76,7 @@ class _$RoomReservationModelCopyWithImpl<$Res,
       roomNumber: null == roomNumber
           ? _value.roomNumber
           : roomNumber // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int,
       reservationName: null == reservationName
           ? _value.reservationName
           : reservationName // ignore: cast_nullable_to_non_nullable
@@ -84,11 +84,11 @@ class _$RoomReservationModelCopyWithImpl<$Res,
       startTime: null == startTime
           ? _value.startTime
           : startTime // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as int,
       endTime: null == endTime
           ? _value.endTime
           : endTime // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as int,
       status: null == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -106,10 +106,10 @@ abstract class _$$RoomReservationModelImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String roomNumber,
+      {int roomNumber,
       String reservationName,
-      DateTime startTime,
-      DateTime endTime,
+      int startTime,
+      int endTime,
       Status status});
 }
 
@@ -136,7 +136,7 @@ class __$$RoomReservationModelImplCopyWithImpl<$Res>
       roomNumber: null == roomNumber
           ? _value.roomNumber
           : roomNumber // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int,
       reservationName: null == reservationName
           ? _value.reservationName
           : reservationName // ignore: cast_nullable_to_non_nullable
@@ -144,11 +144,11 @@ class __$$RoomReservationModelImplCopyWithImpl<$Res>
       startTime: null == startTime
           ? _value.startTime
           : startTime // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as int,
       endTime: null == endTime
           ? _value.endTime
           : endTime // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as int,
       status: null == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -171,13 +171,13 @@ class _$RoomReservationModelImpl implements _RoomReservationModel {
       _$$RoomReservationModelImplFromJson(json);
 
   @override
-  final String roomNumber;
+  final int roomNumber;
   @override
   final String reservationName;
   @override
-  final DateTime startTime;
+  final int startTime;
   @override
-  final DateTime endTime;
+  final int endTime;
   @override
   final Status status;
 
@@ -226,23 +226,23 @@ class _$RoomReservationModelImpl implements _RoomReservationModel {
 
 abstract class _RoomReservationModel implements RoomReservationModel {
   const factory _RoomReservationModel(
-      {required final String roomNumber,
+      {required final int roomNumber,
       required final String reservationName,
-      required final DateTime startTime,
-      required final DateTime endTime,
+      required final int startTime,
+      required final int endTime,
       required final Status status}) = _$RoomReservationModelImpl;
 
   factory _RoomReservationModel.fromJson(Map<String, dynamic> json) =
       _$RoomReservationModelImpl.fromJson;
 
   @override
-  String get roomNumber;
+  int get roomNumber;
   @override
   String get reservationName;
   @override
-  DateTime get startTime;
+  int get startTime;
   @override
-  DateTime get endTime;
+  int get endTime;
   @override
   Status get status;
 
