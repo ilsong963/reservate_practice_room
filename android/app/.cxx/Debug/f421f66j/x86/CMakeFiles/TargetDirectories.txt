@@ -1,0 +1,2 @@
+C:/Users/ilson/Desktop/reservate_practice_room/android/app/.cxx/Debug/f421f66j/x86/CMakeFiles/edit_cache.dir
+C:/Users/ilson/Desktop/reservate_practice_room/android/app/.cxx/Debug/f421f66j/x86/CMakeFiles/rebuild_cache.dir
