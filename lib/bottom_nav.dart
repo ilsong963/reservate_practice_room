@@ -32,17 +32,27 @@ class _BottomNavigationBarScaffoldState extends State<BottomNavigationBarScaffol
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: widget.child,
-      bottomNavigationBar: BottomNavigationBar(
-        onTap: onTap,
-        currentIndex: selectedIndex,
-        items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: '홈'),
-          BottomNavigationBarItem(icon: Icon(Icons.chat), label: '예약'),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: '내 정보'),
-          // 추가 탭이 있다면 여기에 아이템 추가
-        ],
-      ),
-    );
+        body: widget.child,
+        bottomNavigationBar: Container(
+          decoration: BoxDecoration(
+            boxShadow: <BoxShadow>[
+              // 그림자효과
+              BoxShadow(
+                color: Colors.grey,
+                blurRadius: 3,
+              ),
+            ],
+          ),
+          child: BottomNavigationBar(
+            onTap: onTap,
+            currentIndex: selectedIndex,
+            items: const [
+              BottomNavigationBarItem(icon: Icon(Icons.home), label: '홈'),
+              BottomNavigationBarItem(icon: Icon(Icons.chat), label: '예약'),
+              BottomNavigationBarItem(icon: Icon(Icons.person), label: '내 정보'),
+              // 추가 탭이 있다면 여기에 아이템 추가
+            ],
+          ),
+        ));
   }
 }
