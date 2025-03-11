@@ -4,7 +4,7 @@ import 'package:reservate_practice_room/bottom_nav.dart';
 import 'package:reservate_practice_room/home_screen/home_screen.dart';
 import 'package:reservate_practice_room/info_screen.dart';
 import 'package:reservate_practice_room/login_screen.dart';
-import 'package:reservate_practice_room/reservation_screen.dart';
+import 'package:reservate_practice_room/reservation_screen/reservation_screen.dart';
 
 final _shellNavigatorKey = GlobalKey<NavigatorState>();
 
