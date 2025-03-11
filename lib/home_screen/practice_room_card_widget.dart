@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class PracticeRoomCardWidget extends StatelessWidget {
-  const PracticeRoomCardWidget({super.key});
+  const PracticeRoomCardWidget({super.key, required this.controller, required this.onPressed});
+  final DraggableScrollableController controller;
+  final Function onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -113,7 +115,9 @@ class PracticeRoomCardWidget extends StatelessWidget {
                                     Radius.circular(10),
                                   ),
                                 )),
-                            onPressed: () {},
+                            onPressed: () {
+                              onPressed();
+                            },
                             child: Text('예약'),
                           ),
                         ),
