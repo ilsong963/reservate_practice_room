@@ -4,8 +4,25 @@ import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
 import 'package:kakao_flutter_sdk_user/kakao_flutter_sdk_user.dart';
 
-class LoginScreen extends StatelessWidget {
+class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
+
+  @override
+  State<LoginScreen> createState() => _LoginScreenState();
+}
+
+class _LoginScreenState extends State<LoginScreen> {
+  @override
+  void initState() {
+    super.initState();
+    checkTokenAndNavigate(); // 앱 시작 시 토큰 체크
+  }
+
+  Future<void> checkTokenAndNavigate() async {
+    if (await hasKakaoToken()) {
+      context.go('/home'); // 홈 화면으로 이동
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -56,6 +73,27 @@ class LoginScreen extends StatelessWidget {
       } catch (error) {
         log('카카오계정으로 로그인 실패 $error');
       }
+    }
+  }
+
+  Future<bool> hasKakaoToken() async {
+    if (await AuthApi.instance.hasToken()) {
+      try {
+        AccessTokenInfo tokenInfo = await UserApi.instance.accessTokenInfo();
+        print('토큰 유효성 체크 성공 ${tokenInfo.id} ${tokenInfo.expiresIn}');
+
+        return true;
+      } catch (error) {
+        if (error is KakaoException && error.isInvalidTokenError()) {
+          print('토큰 만료 $error');
+        } else {
+          print('토큰 정보 조회 실패 $error');
+        }
+        return false;
+      }
+    } else {
+      print('발급된 토큰 없음');
+      return false;
     }
   }
 }
